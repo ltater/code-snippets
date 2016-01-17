@@ -1,0 +1,34 @@
+var decimal;
+
+function binaryToDecimal(num) {
+
+     // Convert number to a string of digits, and then split them into an array
+     var binaryArray = num.toString().split(“”); // binaryArray = [“0”, “1”, “0”, “1”]
+
+     // Convert the array of strings to an array of integers.
+     // Using the map method creates a NEW array, so you need to store the new output in a new array.
+     // String the reverse method to the back of the array to save steps.
+     var intBinaryArray = binaryArray.map(Number).reverse(); // intBinaryArray = [1, 0, 1, 0]
+
+     var powerOfTwoArray = [];
+
+     // For each value in the length of the intBinaryArray, multiply that value by 2 to the power of its index
+     for (var i = 0; i < intBinaryArray.length; i++) {
+          var value = intBinaryArray[i]; // find each value in the array
+          var powerOfTwo = (value * Math.pow(2, [i])); // multiply each value by 2 to the power of its index
+
+          // Push each Power Of Two into a new array
+          powerOfTwoArray.push(powerOfTwo);
+      };
+
+      // Add all of the numbers of the Power of Two Array using the reduce method
+      decimal = powerOfTwoArray.reduce(function(a,b) {
+           return a + b;
+      });
+}
+
+binaryToDecimal(1010);
+decimal; // 10
+
+// Fun Fact: JavaScript repl.it does not read num correctly if you start num with 0.
+// binaryToDecimal(0101) returns num = 65 and binaryToDecimal(0111) returns num = 73, but all other integers (34, 75, etc.) read correctly.
