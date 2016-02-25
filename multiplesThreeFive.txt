@@ -15,8 +15,8 @@ function multiples(number) {
 
     var count = 0;
     while (count < number) {
-        var element = count += 1;
-        rangeArray.push(element);
+        count += 1;
+        rangeArray.push(count);
     }
 
     console.log(rangeArray);
