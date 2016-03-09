@@ -1,0 +1,21 @@
+function fibonnaci(maxNumber) {
+
+    var array = [];
+    
+    // i = edge case if k > maxNumber - will log array of x (j = x)
+    // j = starting point
+    // k = index
+    
+    for (var i = 0, j = 1, k = 0; k < maxNumber; i = j, j = x, k++) {
+        x = i + j;
+        console.log(x);
+        
+        array.push(x);
+    }
+    
+    console.log(array);
+}
+
+fibonnaci(11);
+
+// next: evenFibonnaci
