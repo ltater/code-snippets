@@ -19,3 +19,33 @@ function fibonnaci(maxNumber) {
 fibonnaci(11);
 
 // next: evenFibonnaci
+
+function evenFibonnaci(maxNumber) {
+
+    var array = [];
+    
+    // i = edge case if k > maxNumber - will log array of x (j = x)
+    // j = starting point
+    // k = index
+    
+    for (var i = 0, j = 1, k = 0; k < maxNumber; i = j, j = x, k++) {
+        x = i + j;
+        console.log(x);
+        
+        array.push(x);
+    }
+    
+    console.log(array);
+    
+    var evenArray = [];
+    
+    for (var m = 0; m < array.length; m++) {
+        if (array[m] % 2 === 0) {
+            evenArray.push(array[m]);
+        }
+    }
+    
+    console.log(evenArray);
+}
+
+evenFibonnaci(11);
